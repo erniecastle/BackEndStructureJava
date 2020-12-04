@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd" xmlns:aop="http://www.springframework.org/schema/aop">
+    <context:annotation-config />
+    <context:component-scan base-package="com.mef.erp.servicios" />
+
+    <!-- Servicios Publicados-->   
+    
+    <bean name="/servicioAsignaTipoReporte" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioAsignaTipoReporte"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioAsignaTipoReporteIF" />
+    </bean>
+    
+    <bean name="/servicioAsistencias" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioAsistencias"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioAsistenciasIF" />
+    </bean>
+
+    <bean name="/servicioBancos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioBancos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioBancosIF" />
+    </bean>
+    
+    <bean name="/servicioDiasAguinaldo " class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioDiasAguinaldo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioDiasAguinaldoIF" />
+    </bean>
+    
+    <bean name="/servicioConfiguracionAguinaldo " class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguracionAguinaldo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfiguracionAguinaldoIF" />
+    </bean>
+    
+    <bean name="/servicioAguinaldoFechas " class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioAguinaldoFechas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioAguinaldoFechasIF" />
+    </bean>
+    
+    <bean name="/servicioAguinaldoPagos " class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioAguinaldoPagos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioAguinaldoPagosIF" />
+    </bean>
+    
+    <bean name="/servicioBaseDatos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioBaseDatos"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioBaseDatosIF" />
+    </bean>
+    
+    <bean name="/servicioCapacitaciones" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCapacitaciones"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCapacitacionesIF" />
+    </bean>
+
+    <bean name="/servicioCategoriasPuestos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCategoriasPuestos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCategoriasPuestosIF" />
+    </bean>
+    
+    <bean name="/servicioCentroDeCostos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCentroDeCostos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCentroDeCostosIF" />
+    </bean>
+    
+    <bean name="/servicioConceptoDeNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConceptoDeNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConceptoDeNominaIF" />
+    </bean>
+    <bean name="/servicioConceptoDeNominaDefinicion" class="org.springframework.remoting.caucho.HessianServiceExporter"  scope="prototype">
+        <property name="service" ref="servicioConceptoDeNominaDefinicion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConceptoDeNominaDefinicionIF" />
+    </bean>
+
+    <bean name="/servicioCiudades" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCiudades"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCiudadesIF" />
+    </bean>
+
+    <bean name="/servicioConceptoPorTipoCorrida" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConceptoPorTipoCorrida"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConceptoPorTipoCorridaIF" />
+    </bean>
+    
+    <bean name="/servicioConceptosEspeciales" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConceptosEspeciales"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConceptosEspecialesIF" />
+    </bean>    
+    
+    <bean name="/servicioConfiguracionAsistencias" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguracionAsistencias"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfiguracionAsistenciasIF" />
+    </bean>
+    
+    <bean name="/servicioConfigConceptosSat" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfigConceptosSat"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfigConceptosSatIF" />
+    </bean>
+
+    <bean name="/servicioConfigFoliacion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfigFoliacion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfigFoliacionIF" />
+    </bean>
+            
+    <bean name="/servicioConfigMascaras" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfigMascaras"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfigMascarasIF" />
+    </bean>
+
+    <bean name="/servicioConfiguracionIMSS" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguracionIMSS"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfiguracionIMSSIF" />
+    </bean>
+
+    <bean name="/servicioConfiguracionNivelCuenta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguracionNivelCuenta"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfiguracionNivelCuentaIF" />
+    </bean>
+
+  
+    <bean name="/servicioEstrucCuenta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioEstrucCuenta"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioEstrucCuentaIF" />
+    </bean>
+
+    <bean name="/servicioConsultaGenerica" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConsultaGenerica"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConsultaGenericaIF" />
+    </bean>
+
+    <bean name="/servicioConsultaGenericaEspeciales" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConsultaGenericaEspeciales"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConsultaGenericaEspecialesIF" />
+    </bean>
+
+    <bean name="/servicioContactos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioContactos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioContactosIF" />
+    </bean>
+
+    <bean name="/servicioContenedor" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioContenedor"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioContenedorIF" />
+    </bean>
+
+    <bean name="/servicioContenedorPersonalizado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioContenedorPersonalizado"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioContenedorPersonalizadoIF" />
+    </bean>
+
+    <bean name="/servicioCP" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCP"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCPIF" />
+    </bean>
+    
+    <bean name="/servicioCreditoPorEmpleado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCreditoPorEmpleado"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCreditoPorEmpleadoIF" />
+    </bean>
+
+    <bean name="/servicioCruce" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCruce" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCruceIF" />
+    </bean>
+    
+    <bean name="/servicioCuentasContables" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCuentasContables" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCuentasContablesIF" />
+    </bean>
+    
+    <bean name="/servicioCursos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCursos" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCursosIF" />
+    </bean>
+    
+    <bean name="/servicioGenero" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioGenero" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioGeneroIF" />
+    </bean>
+    
+    <bean name="/servicioConfiguraTimbrado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguraTimbrado" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioConfiguraTimbradoIF" />
+    </bean>
+        
+    <bean name="/servicioDespensa" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioDespensa" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioDespensaIF" />
+    </bean>
+    
+    <bean name="/servicioDocumentacion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioDocumentacion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioDocumentacionIF" />
+    </bean>
+
+    <bean name="/servicioElementosAplicacion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioElementosAplicacion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioElementosAplicacionIF" />
+    </bean>
+
+    <bean name="/servicioElementoExterno" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioElementoExterno"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioElementoExternoIF" />
+    </bean>
+    
+    <bean name="/servicioEmpleados" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioEmpleados"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioEmpleadosIF" />
+    </bean>
+
+    <bean name="/servicioEstados" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioEstados"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioEstadosIF" />
+    </bean>
+    <bean name="/servicioEstudios" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioEstudios"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioEstudiosIF" />
+    </bean>
+    
+    <bean name="/servicioExcepciones" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioExcepciones"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioExcepcionesIF" />
+    </bean>
+
+    <bean name="/servicioExperienciaLaboralExterna" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioExperienciaLaboralExterna"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioExperienciaLaboralExternaIF" />
+    </bean>
+
+    <bean name="/servicioExperienciaLaboralInterna" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioExperienciaLaboralInterna"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioExperienciaLaboralInternaIF" />
+    </bean>
+    
+    <bean name="/servicioExternoPersonalizado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioExternoPersonalizado"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioExternoPersonalizadoIF" />
+    </bean>
+    
+    <bean name="/servicioFamiliares" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFamiliares"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFamiliaresIF" />
+    </bean>
+    
+    <bean name="/servicioFiniqLiquidCncNom" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFiniqLiquidCncNom"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFiniqLiquidCncNomIF" />
+    </bean>
+    
+    <bean name="/servicioFiniqLiquidPlazas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFiniqLiquidPlazas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFiniqLiquidPlazasIF" />
+    </bean>
+    
+    <bean name="/servicioFiniquitosLiquidaciones" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFiniquitosLiquidaciones"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFiniquitosLiquidacionesIF" />
+    </bean>
+    
+    <bean name="/servicioFormacionEconomica" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFormacionEconomica"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFormacionEconomicaIF" />
+    </bean>
+    
+    <bean name="/servicioFormasDePago" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFormasDePago"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFormasDePagoIF" />
+    </bean>
+    
+    <bean name="/servicioFormatoCnxConta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFormatoCnxConta"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioFormatoCnxContaIF" />
+    </bean>
+    
+    <bean name="/servicioGrupos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioGrupos"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioGruposIF" />
+    </bean>
+    
+    <bean name="/servicioHerramienta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioHerramienta"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioHerramientaIF" />
+    </bean>
+
+    <bean name="/servicioHerramientaPersonalizada" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioHerramientaPersonalizada"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioHerramientaPersonalizadaIF" />
+    </bean>
+
+    <bean name="/servicioHorario" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioHorario"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioHorarioIF" />
+    </bean>
+    
+    <bean name="/servicioImportaCampos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioImportaCampos" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioImportaCamposIF" />
+    </bean>
+    
+    <bean name="/servicioIncidencias" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioIncidencias" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioIncidenciasIF" />
+    </bean>
+    
+    <bean name="/servicioIngresosReingresosBajas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioIngresosReingresosBajas" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioIngresosReingresosBajasIF" />
+    </bean>
+         
+    <bean name="/servicioFirmas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioFirmas" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioFirmasIF" />
+    </bean>
+
+    <bean name="/servicioJornada" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioJornada" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioJornadaIF" />
+    </bean>
+        
+    <bean name="/servicioNivelesClasificacion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioNivelesClasificacion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioNivelesClasificacionIF" />
+    </bean>
+
+    <bean name="/servicioModulo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioModulo"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioModuloIF" />
+    </bean>
+
+    <bean name="/servicioMonedas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioMonedas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioMonedasIF" />
+    </bean>
+    
+    <bean name="/servicioCreditoMovimientos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCreditoMovimientos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCreditoMovimientosIF" />
+    </bean>
+    
+    <bean name="/servicioMovNominaBaseAfecta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioMovNominaBaseAfecta"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioMovNominaBaseAfectaIF" />
+    </bean>
+    
+    <bean name="/servicioMovimientosNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioMovimientosNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioMovimientosNominaIF" />
+    </bean>
+
+    <bean name="/servicioMunicipios" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioMunicipios"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioMunicipiosIF" />
+    </bean>
+    
+    <bean name="/servicioCFDIEmpleado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCFDIEmpleado"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCFDIEmpleadoIF" />
+    </bean>
+    
+    <bean name="/servicioCFDIRecibo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCFDIRecibo"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCFDIReciboIF" />
+    </bean>
+
+    <bean name="/servicioPaises" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPaises"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioPaisesIF" />
+    </bean>
+    
+    <bean name="/servicioParametroConceptosDeNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioParametroConceptosDeNomina"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioParametroConceptosDeNominaIF" />
+    </bean>
+    
+    <bean name="/servicioParametros" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioParametros"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioParametrosIF" />
+    </bean>
+    
+    <bean name="/servicioParametrosConsulta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioParametrosConsulta"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioParametrosConsultaIF" />
+    </bean>
+          
+    <bean name="/servicioParentesco" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioParentesco"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioParentescoIF" />
+    </bean>
+
+    <bean name="/servicioPercepcionesFijas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPercepcionesFijas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPercepcionesFijasIF" />
+    </bean>
+      
+    <bean name="/servicioPeriodosNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPeriodosNomina"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioPeriodosNominaIF" />
+    </bean>
+    
+    <bean name="/servicioPermisos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPermisos"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioPermisosIF" />
+    </bean>
+
+    <bean name="/servicioPerfil" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPerfil"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioPerfilIF" />
+    </bean>
+    
+    <bean name="/servicioPlazas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPlazas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPlazasIF" />
+    </bean>
+    
+    <bean name="/servicioPlazasPorEmpleado" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPlazasPorEmpleado"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPlazasPorEmpleadoIF" />
+    </bean>
+    
+    <bean name="/servicioPlazasPorEmpleadosMov" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPlazasPorEmpleadosMov"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPlazasPorEmpleadosMovIF" />
+    </bean>
+    
+    <bean name="/servicioPrima" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPrima"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPrimaIF" />
+    </bean>
+
+    <bean name="/servicioPuestos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPuestos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioPuestosIF" />
+    </bean>
+    
+    <bean name="/servicioRazonSocial" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRazonSocial"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRazonSocialIF" />
+    </bean>
+    
+    <bean name="/servicioRazonSocialConfiguracion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRazonSocialConfiguracion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRazonSocialConfiguracionIF" />
+    </bean>
+
+    <bean name="/servicioRazonesSociales" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRazonesSociales"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRazonesSocialesIF" />
+    </bean>
+
+    <bean name="/servicioRegistroPatronal" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRegistroPatronal"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRegistroPatronalIF" />
+    </bean>
+    
+    <bean name="/servicioRegistroIncapacidad" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRegistroIncapacidad"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRegistroIncapacidadIF" />
+    </bean>
+    
+    <bean name="/servicioRestricciones" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioRestricciones"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioRestriccionesIF" />
+    </bean>
+    <bean name="/servicioReporteDatosIncluir" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteDatosIncluir"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteDatosIncluirIF" />
+    </bean>
+    
+    <bean name="/servicioReporteDinamico" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteDinamico"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteDinamicoIF" />
+    </bean>
+    
+    <bean name="/servicioReporteEstilos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteEstilos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteEstilosIF" />
+    </bean>
+    
+    <bean name="/servicioReporteFuenteDatos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteFuenteDatos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteFuenteDatosIF" />
+    </bean>
+    
+    <bean name="/servicioReporteFijo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteFijo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteFijoIF" />
+    </bean>
+    
+    
+    <bean name="/servicioReporteOrdenGrupo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioReporteOrdenGrupo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioReporteOrdenGrupoIF" />
+    </bean>
+    
+    <bean name="/servicioSalariosIntegrados" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioSalariosIntegrados"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioSalariosIntegradosIF" />
+    </bean>
+    
+    <bean name="/servicioSalariosIntegradosDet" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioSalariosIntegradosDet"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioSalariosIntegradosDetIF" />
+    </bean>
+    
+    <bean name="/servicioSistemas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioSistemas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioSistemasIF" />
+    </bean>
+
+    <bean name="/servicioTablaBase" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTablaBase"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTablaBaseIF" />
+    </bean>
+
+    <bean name="/servicioTablaDatos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTablaDatos"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTablaDatosIF" />
+    </bean>
+
+    <bean name="/servicioTablaPersonalizada" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTablaPersonalizada"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTablaPersonalizadaIF" />
+    </bean>
+
+    <bean name="/servicioTipoCentroCostos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoCentroCostos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTipoCentroCostosIF" />
+    </bean>
+    
+    <bean name="/servicioTipoElemento" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoElemento"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTipoElementoIF" />
+    </bean>
+
+    <bean name="/servicioTipoHerramienta" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoHerramienta"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTipoHerramientaIF" />
+    </bean>
+
+    <bean name="/servicioTipoTabla" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoTabla"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTipoTablaIF" />
+    </bean>
+    
+    <bean name="/servicioTurnos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTurnos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTurnosIF" />
+    </bean>
+    
+    <bean name="/servicioUsuario" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioUsuario"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioUsuarioIF" />
+    </bean>
+    
+    <bean name="/servicioVentana" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioVentana"  />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioVentanaIF" />
+    </bean>
+    
+    <bean name="/servicioVacacionesDevengadas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioVacacionesDevengadas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioVacacionesDevengadasIF" />
+    </bean>
+    
+    <bean name="/servicioTipoNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoNomina" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioTipoNominaIF" />
+    </bean>
+    
+    <bean name="/servicioPeriodicidad" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioPeriodicidad" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioPeriodicidadIF" />
+    </bean>
+    
+    <bean name="/servicioDepartamentos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioDepartamentos" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioDepartamentosIF" />
+    </bean>
+    
+    <bean name="/servicioCreditoAhorro" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCreditoAhorro" />
+        <property name="serviceInterface" value="com.mef.erp.servicios.ServicioCreditoAhorroIF" />
+    </bean>    
+    <bean name="/servicioTiposDeCambio" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTiposDeCambio"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTiposDeCambioIF" />
+    </bean>
+    <bean name="/servicioTipoDeRedondeo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoDeRedondeo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTipoDeRedondeoIF" />
+    </bean>
+    <bean name="/servicioTipoCorrida" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoCorrida"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTipoCorridaIF" />
+    </bean>
+    <bean name="/servicioBaseNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioBaseNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioBaseNominaIF" />
+    </bean>
+    <bean name="/servicioBaseAfectadaConceptoNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioBaseAfectadaConceptoNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioBaseAfectadaConceptoNominaIF" />
+    </bean>
+    <bean name="/servicioBaseAfectadaGrupo" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioBaseAfectadaGrupo"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioBaseAfectadaGrupoIF" />
+    </bean>
+    <bean name="/servicioCalculoNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCalculoNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCalculoNominaIF" />
+    </bean>
+    <bean name="/servicioCalculoPtu" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCalculoPtu"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCalculoPtuIF" />
+    </bean>
+    <bean name="/servicioCamposDimConceptos" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCamposDimConceptos"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCamposDimConceptosIF" />
+    </bean>
+    <bean name="/servicioCampoDIM" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioCampoDIM"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioCampoDIMIF" />
+    </bean>
+    <bean name="/servicioConfiguraMovimiento" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioConfiguraMovimiento"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioConfiguraMovimientoIF" />
+    </bean>
+    <bean name="/servicioTipoContrato" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTipoContrato"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTipoContratoIF" />
+    </bean>
+    <bean name="/servicioTiposVacaciones" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioTiposVacaciones"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioTiposVacacionesIF" />
+    </bean>
+    <bean name="/servicioSemaforoCalculoNomina" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioSemaforoCalculoNomina"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioSemaforoCalculoNominaIF" />
+    </bean>
+    <bean name="/servicioSemaforoTimbradoPac" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioSemaforoTimbradoPac"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioSemaforoTimbradoPacIF" />
+    </bean>
+    <bean name="/servicioVacacionesAplicacion" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioVacacionesAplicacion"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioVacacionesAplicacionIF" />
+    </bean>
+    <bean name="/servicioVacacionesDisfrutadas" class="org.springframework.remoting.caucho.HessianServiceExporter" scope="prototype">
+        <property name="service" ref="servicioVacacionesDisfrutadas"  />
+        <property name="serviceInterface" value= "com.mef.erp.servicios.ServicioVacacionesDisfrutadasIF" />
+    </bean>
+    
+    <!-- Servicios -->
+    
+    <bean id="servicioAsignaTipoReporte" class="com.mef.erp.servicios.ServicioAsignaTipoReporte" scope="prototype">
+        <property name="asignaTipoReporteDAO" ref="asignaTipoReporteDAO" />
+    </bean>
+    
+    <bean id="servicioAsistencias" class="com.mef.erp.servicios.ServicioAsistencias" scope="prototype">
+        <property name="asistenciasDAO" ref="asistenciasDAO" />
+    </bean>
+    <bean id="servicioBancos" class="com.mef.erp.servicios.ServicioBancos" scope="prototype">
+        <property name="bancosDAO" ref="bancosDAO" />
+    </bean>
+
+    <bean id="servicioDiasAguinaldo" class="com.mef.erp.servicios.ServicioDiasAguinaldo" scope="prototype">
+        <property name="diasAguinaldoDAO" ref="diasAguinaldoDAO" />
+    </bean>
+   
+    <bean id="servicioConfiguracionAguinaldo" class="com.mef.erp.servicios.ServicioConfiguracionAguinaldo" scope="prototype">
+        <property name="configuracionAguinaldoDAO" ref="configuracionAguinaldoDAO" />
+    </bean>
+    
+    <bean id="servicioAguinaldoFechas" class="com.mef.erp.servicios.ServicioAguinaldoFechas" scope="prototype">
+        <property name="aguinaldoFechasDAO" ref="aguinaldoFechasDAO" />
+    </bean>
+
+    <bean id="servicioAguinaldoPagos" class="com.mef.erp.servicios.ServicioAguinaldoPagos" scope="prototype">
+        <property name="aguinaldoPagosDAO" ref="aguinaldoPagosDAO" />
+    </bean>
+
+    <bean id="servicioBaseDatos" class="com.mef.erp.servicios.ServicioBaseDatos" scope="prototype">
+    </bean>
+    <bean id="servicioCapacitaciones" class="com.mef.erp.servicios.ServicioCapacitaciones" scope="prototype">
+        <property name="capacitacionesDAO" ref="capacitacionesDAO" />
+    </bean>
+    <bean id="servicioCategoriasPuestos" class="com.mef.erp.servicios.ServicioCategoriasPuestos" scope="prototype">
+        <property name="categoriasPuestosDAO" ref="categoriasPuestosDAO" />
+    </bean>
+    
+    <bean id="servicioCentroDeCostos" class="com.mef.erp.servicios.ServicioCentroDeCostos" scope="prototype">
+        <property name="centroDeCostosDAO" ref="centroDeCostosDAO" />
+    </bean>
+    
+    <bean id="servicioCiudades" class="com.mef.erp.servicios.ServicioCiudades" scope="prototype">
+        <property name="ciudadesDAO" ref="ciudadesDAO" />
+    </bean>
+    
+    <bean id="servicioConceptoPorTipoCorrida" class="com.mef.erp.servicios.ServicioConceptoPorTipoCorrida" scope="prototype">
+        <property name="conceptoPorTipoCorridaDAO" ref="conceptoPorTipoCorridaDAO" />
+    </bean>
+    
+    <bean id="servicioConceptosEspeciales" class="com.mef.erp.servicios.ServicioConceptosEspeciales" scope="prototype">
+        <property name="conceptosEspecialesDAO" ref="conceptosEspecialesDAO" />
+    </bean>
+    
+    <bean id="servicioConfiguracionAsistencias" class="com.mef.erp.servicios.ServicioConfiguracionAsistencias" scope="prototype">
+        <property name="configuracionAsistenciasDAO" ref="configuracionAsistenciasDAO" />
+    </bean>
+    
+    <bean id="servicioConfigConceptosSat" class="com.mef.erp.servicios.ServicioConfigConceptosSat" scope="prototype">
+        <property name="configConceptosSatDAO" ref="configConceptosSatDAO" />
+    </bean>
+    
+    <bean id="servicioConfigFoliacion" class="com.mef.erp.servicios.ServicioConfigFoliacion" scope="prototype">
+        <property name="configFoliacionDAO" ref="configFoliacionDAO" />
+    </bean>
+    
+    <bean id="servicioConfigMascaras" class="com.mef.erp.servicios.ServicioConfigMascaras" scope="prototype">
+        <property name="configMascarasDAO" ref="configMascarasDAO" />
+    </bean>
+    
+    <bean id="servicioConfiguracionIMSS" class="com.mef.erp.servicios.ServicioConfiguracionIMSS" scope="prototype">
+        <property name="configuracionIMSSDAO" ref="configuracionIMSSDAO" />
+    </bean>
+
+    <bean id="servicioConfiguracionNivelCuenta" class="com.mef.erp.servicios.ServicioConfiguracionNivelCuenta" scope="prototype">
+        <property name="configuracionNivelCuentaDAO" ref="configuracionNivelCuentaDAO"/>
+    </bean>
+    
+    <bean id="servicioEstrucCuenta" class="com.mef.erp.servicios.ServicioEstrucCuenta" scope="prototype">
+        <property name="estrucCuentaDAO" ref="estrucCuentaDAO"/>
+    </bean>
+    
+    
+    <bean id="servicioConsultaGenerica" class="com.mef.erp.servicios.ServicioConsultaGenerica" scope="prototype">
+        <property name="consultaGenericaDAO" ref="consultaGenericaDAO" />
+    </bean>
+    
+    <bean id="servicioConsultaGenericaEspeciales" class="com.mef.erp.servicios.ServicioConsultaGenericaEspeciales" scope="prototype">
+        <property name="consultaGenericaEspecialesDAO" ref="consultaGenericaEspecialesDAO" />
+    </bean>
+    
+    <bean id="servicioContactos" class="com.mef.erp.servicios.ServicioContactos" scope="prototype">
+        <property name="contactosDAO" ref="contactosDAO" />
+    </bean>
+
+    <bean id="servicioContenedor" class="com.mef.erp.servicios.ServicioContenedor" scope="prototype">
+        <property name="contenedorDAO" ref="contenedorDAO" />
+    </bean>
+    <bean id="servicioContenedorPersonalizado" class="com.mef.erp.servicios.ServicioContenedorPersonalizado" scope="prototype">
+        <property name="contenedorPersonalizadoDAO" ref="contenedorPersonalizadoDAO" />
+    </bean>
+    <bean id="servicioCP" class="com.mef.erp.servicios.ServicioCP" scope="prototype">
+        <property name="cpDAO" ref="cpDAO" />
+    </bean>
+    <bean id="servicioCreditoPorEmpleado" class="com.mef.erp.servicios.ServicioCreditoPorEmpleado" scope="prototype">
+        <property name="creditoPorEmpleadoDAO" ref="creditoPorEmpleadoDAO" />
+    </bean>
+    <bean id="servicioCruce" class="com.mef.erp.servicios.ServicioCruce" scope="prototype">
+        <property name="cruceDAO" ref="cruceDAO" />
+    </bean>
+    <bean id="servicioCuentasContables" class="com.mef.erp.servicios.ServicioCuentasContables" scope="prototype">
+        <property name="cuentasContablesDAO" ref="cuentasContablesDAO"/>
+    </bean>
+    <bean id="servicioCursos" class="com.mef.erp.servicios.ServicioCursos" scope="prototype">
+        <property name="cursosDAO" ref="cursosDAO" />
+    </bean>
+    <bean id="servicioGenero" class="com.mef.erp.servicios.ServicioGenero" scope="prototype">
+        <property name="generoDAO" ref="generoDAO" />
+    </bean>
+    <bean id="servicioConfiguraTimbrado" class="com.mef.erp.servicios.ServicioConfiguraTimbrado" scope="prototype">
+        <property name="configuraTimbradoDAO" ref="configuraTimbradoDAO" />
+    </bean>
+    <bean id="servicioDespensa" class="com.mef.erp.servicios.ServicioDespensa" scope="prototype">
+        <property name="despensaDAO" ref="despensaDAO" />
+    </bean>    
+    <bean id="servicioDocumentacion" class="com.mef.erp.servicios.ServicioDocumentacion" scope="prototype">
+        <property name="documentacionDAO" ref="documentacionDAO" />
+    </bean>
+    <bean id="servicioElementosAplicacion" class="com.mef.erp.servicios.ServicioElementosAplicacion" scope="prototype">
+        <property name="elementosAplicacionDAO" ref="elementosAplicacionDAO" />
+    </bean>
+    <bean id="servicioElementoExterno" class="com.mef.erp.servicios.ServicioElementoExterno" scope="prototype">
+        <property name="elementoExternoDAO" ref="elementoExternoDAO" />
+    </bean>
+    <bean id="servicioEmpleados" class="com.mef.erp.servicios.ServicioEmpleados" scope="prototype" >
+        <property name="empleadosDAO" ref="empleadosDAO" />
+    </bean>
+    <bean id="servicioEstados" class="com.mef.erp.servicios.ServicioEstados" scope="prototype">
+        <property name="estadosDAO" ref="estadosDAO" />
+    </bean>
+    <bean id="servicioEstudios" class="com.mef.erp.servicios.ServicioEstudios" scope="prototype">
+        <property name="estudiosDAO" ref="estudiosDAO" />
+    </bean>
+    <bean id="servicioExcepciones" class="com.mef.erp.servicios.ServicioExcepciones" scope="prototype">
+        <property name="excepcionesDAO" ref="excepcionesDAO" />
+    </bean>
+    <bean id="servicioExperienciaLaboralExterna" class="com.mef.erp.servicios.ServicioExperienciaLaboralExterna" scope="prototype">
+        <property name="experienciaLaboralExternaDAO" ref="experienciaLaboralExternaDAO" />
+    </bean>
+    <bean id="servicioExperienciaLaboralInterna" class="com.mef.erp.servicios.ServicioExperienciaLaboralInterna" scope="prototype">
+        <property name="experienciaLaboralInternaDAO" ref="experienciaLaboralInternaDAO" />
+    </bean>
+    <bean id="servicioExternoPersonalizado" class="com.mef.erp.servicios.ServicioExternoPersonalizado" scope="prototype">
+        <property name="externoPersonalizadoDAO" ref="externoPersonalizadoDAO" />
+    </bean>
+    <bean id="servicioFamiliares" class="com.mef.erp.servicios.ServicioFamiliares" scope="prototype">
+        <property name="familiaresDAO" ref="familiaresDAO" />
+    </bean>
+    <bean id="servicioFiniqLiquidCncNom" class="com.mef.erp.servicios.ServicioFiniqLiquidCncNom" scope="prototype">
+        <property name="finiqLiquidCncNomDAO" ref="finiqLiquidCncNomDAO" />
+    </bean>
+    <bean id="servicioFiniqLiquidPlazas" class="com.mef.erp.servicios.ServicioFiniqLiquidPlazas" scope="prototype">
+        <property name="finiqLiquidPlazasDAO" ref="finiqLiquidPlazasDAO" />
+    </bean>
+    <bean id="servicioFiniquitosLiquidaciones" class="com.mef.erp.servicios.ServicioFiniquitosLiquidaciones" scope="prototype">
+        <property name="finiquitosLiquidacionesDAO" ref="finiquitosLiquidacionesDAO" />
+    </bean>
+    <bean id="servicioFormacionEconomica" class="com.mef.erp.servicios.ServicioFormacionEconomica" scope="prototype">
+        <property name="formacionEconomicaDAO" ref="formacionEconomicaDAO" />
+    </bean>
+    <bean id="servicioFormatoCnxConta" class="com.mef.erp.servicios.ServicioFormatoCnxConta">
+        <property name="formatoCnxContaDAO" ref="formatoCnxContaDAO" />
+    </bean>
+    <bean id="servicioFormasDePago" class="com.mef.erp.servicios.ServicioFormasDePago" scope="prototype">
+        <property name="formasDePagoDAO" ref="formasDePagoDAO" />
+    </bean>
+    <bean id="servicioGrupos" class="com.mef.erp.servicios.ServicioGrupos" scope="prototype">
+        <property name="gruposDAO" ref="gruposDAO" />
+    </bean>
+    <bean id="servicioHerramienta" class="com.mef.erp.servicios.ServicioHerramienta" scope="prototype">
+        <property name="herramientaDAO" ref="herramientaDAO" />
+    </bean>
+    <bean id="servicioHerramientaPersonalizada" class="com.mef.erp.servicios.ServicioHerramientaPersonalizada" scope="prototype">
+        <property name="herramientaPersonalizadaDAO" ref="herramientaPersonalizadaDAO" />
+    </bean>
+    <bean id="servicioHorario" class="com.mef.erp.servicios.ServicioHorario" scope="prototype">
+        <property name="horarioDAO" ref="horarioDAO" />
+    </bean>
+    <bean id="servicioImportaCampos" class="com.mef.erp.servicios.ServicioImportaCampos" scope="prototype">
+        <property name="importaCamposDAO" ref="importaCamposDAO" />
+    </bean>
+    <bean id="servicioIncidencias" class="com.mef.erp.servicios.ServicioIncidencias" scope="prototype">
+        <property name="incidenciasDAO" ref="incidenciasDAO" />
+    </bean>
+    <bean id="servicioIngresosReingresosBajas" class="com.mef.erp.servicios.ServicioIngresosReingresosBajas" scope="prototype">
+        <property name="ingresosReingresosBajasDAO" ref="ingresosReingresosBajasDAO" />
+    </bean>
+    <bean id="servicioFirmas" class="com.mef.erp.servicios.ServicioFirmas" scope="prototype">
+        <property name="firmasDAO" ref="firmasDAO" />
+    </bean>
+    <bean id="servicioJornada" class="com.mef.erp.servicios.ServicioJornada" scope="prototype">
+        <property name="jornadaDAO" ref="jornadaDAO" />
+    </bean>
+    <bean id="servicioNivelesClasificacion" class="com.mef.erp.servicios.ServicioNivelesClasificacion" scope="prototype">
+        <property name="nivelesClasificacionDAO" ref="nivelesClasificacionDAO" />
+    </bean>
+    <bean id="servicioModulo" class="com.mef.erp.servicios.ServicioModulo" scope="prototype">
+        <property name="moduloDAO" ref="moduloDAO" />
+    </bean>
+    <bean id="servicioMonedas" class="com.mef.erp.servicios.ServicioMonedas" scope="prototype">
+        <property name="monedasDAO" ref="monedasDAO" />
+    </bean>
+    <bean id="servicioCreditoMovimientos" class="com.mef.erp.servicios.ServicioCreditoMovimientos" scope="prototype">
+        <property name="creditoMovimientosDAO" ref="creditoMovimientosDAO" />
+    </bean>
+    <bean id="servicioMovNominaBaseAfecta" class="com.mef.erp.servicios.ServicioMovNominaBaseAfecta" scope="prototype">
+        <property name="movNominaBaseAfectaDAO" ref="movNominaBaseAfectaDAO" />
+    </bean>
+    <bean id="servicioMovimientosNomina" class="com.mef.erp.servicios.ServicioMovimientosNomina" scope="prototype">
+        <property name="movimientosNominaDAO" ref="movimientosNominaDAO" />
+    </bean>
+    <bean id="servicioMunicipios" class="com.mef.erp.servicios.ServicioMunicipios" scope="prototype">
+        <property name="municipiosDAO" ref="municipiosDAO" />
+    </bean>
+    <bean id="servicioCFDIEmpleado" class="com.mef.erp.servicios.ServicioCFDIEmpleado" scope="prototype">
+        <property name="cfdiEmpleadoDAO" ref="cfdiEmpleadoDAO" />
+    </bean>
+    <bean id="servicioCFDIRecibo" class="com.mef.erp.servicios.ServicioCFDIRecibo" scope="prototype">
+        <property name="cfdiReciboDAO" ref="cfdiReciboDAO" />
+    </bean>
+    <bean id="servicioPaises" class="com.mef.erp.servicios.ServicioPaises" scope="prototype">
+        <property name="paisesDAO" ref="paisesDAO" />
+    </bean>
+    <bean id="servicioParametros" class="com.mef.erp.servicios.ServicioParametros" scope="prototype">
+        <property name="parametrosDAO" ref="parametrosDAO" />
+    </bean>
+    <bean id="servicioParametrosConsulta" class="com.mef.erp.servicios.ServicioParametrosConsulta" scope="prototype">
+        <property name="parametrosConsultaDAO" ref="parametrosConsultaDAO" />
+    </bean>
+    <bean id="servicioParametroConceptosDeNomina" class="com.mef.erp.servicios.ServicioParametroConceptosDeNomina" scope="prototype">
+        <property name="parametroConceptosDeNominaDAO" ref="parametroConceptosDeNominaDAO" />
+    </bean>
+    <bean id="servicioParentesco" class="com.mef.erp.servicios.ServicioParentesco" scope="prototype">
+        <property name="parentescoDAO" ref="parentescoDAO" />
+    </bean>    
+    <bean id="servicioPercepcionesFijas" class="com.mef.erp.servicios.ServicioPercepcionesFijas" scope="prototype">
+        <property name="percepcionesFijasDAO" ref="percepcionesFijasDAO" />
+    </bean>
+    <bean id="servicioPerfil" class="com.mef.erp.servicios.ServicioPerfil" scope="prototype">
+        <property name="perfilDAO" ref="perfilDAO" />
+    </bean>
+    <bean id="servicioPeriodosNomina" class="com.mef.erp.servicios.ServicioPeriodosNomina" scope="prototype">
+        <property name="periodosNominaDAO" ref="periodosNominaDAO" />
+    </bean>
+    <bean id="servicioPermisos" class="com.mef.erp.servicios.ServicioPermisos" scope="prototype">
+        <property name="permisosDAO" ref="permisosDAO" />
+    </bean>
+    <bean id="servicioPlazas" class="com.mef.erp.servicios.ServicioPlazas" scope="prototype">
+        <property name="plazasDAO" ref="plazasDAO" />
+    </bean>
+    <bean id="servicioPlazasPorEmpleado" class="com.mef.erp.servicios.ServicioPlazasPorEmpleado" scope="prototype">
+        <property name="plazasPorEmpleadoDAO" ref="plazasPorEmpleadoDAO" />
+    </bean>
+    <bean id="servicioPlazasPorEmpleadosMov" class="com.mef.erp.servicios.ServicioPlazasPorEmpleadosMov" scope="prototype">
+        <property name="plazasPorEmpleadosMovDAO" ref="plazasPorEmpleadosMovDAO" />
+    </bean>
+    <bean id="servicioPrima" class="com.mef.erp.servicios.ServicioPrima" scope="prototype">
+        <property name="primasDAO" ref="primasDAO" />
+    </bean>
+    <bean id="servicioPuestos" class="com.mef.erp.servicios.ServicioPuestos" scope="prototype">
+        <property name="puestosDAO" ref="puestosDAO" />
+    </bean>
+    <bean id="servicioRazonSocial" class="com.mef.erp.servicios.ServicioRazonSocial" scope="prototype">
+        <property name="razonSocialDAO" ref="razonSocialDAO" />
+    </bean>
+    <bean id="servicioRazonSocialConfiguracion" class="com.mef.erp.servicios.ServicioRazonSocialConfiguracion" scope="prototype">
+        <property name="razonSocialConfiguracionDAO" ref="razonSocialConfiguracionDAO" />
+    </bean>
+    <bean id="servicioRazonesSociales" class="com.mef.erp.servicios.ServicioRazonesSociales" scope="prototype">
+        <property name="razonesSocialesDAO" ref="razonesSocialesDAO" />
+    </bean>
+    <bean id="servicioRegistroPatronal" class="com.mef.erp.servicios.ServicioRegistroPatronal" scope="prototype">
+        <property name="registroPatronalDAO" ref="registroPatronalDAO" />
+    </bean>
+    <bean id="servicioRegistroIncapacidad" class="com.mef.erp.servicios.ServicioRegistroIncapacidad" scope="prototype">
+        <property name="registroIncapacidadDAO" ref="registroIncapacidadDAO" />
+    </bean>
+    <bean id="servicioRestricciones" class="com.mef.erp.servicios.ServicioRestricciones" scope="prototype">
+        <property name="restriccionesDAO" ref="restriccionesDAO" />
+    </bean>
+    <bean id="servicioReporteDatosIncluir" class="com.mef.erp.servicios.ServicioReporteDatosIncluir" scope="prototype">
+        <property name="reporteDatosIncluirDAO" ref="reporteDatosIncluirDAO" />
+    </bean>
+    <bean id="servicioReporteDinamico" class="com.mef.erp.servicios.ServicioReporteDinamico" scope="prototype">
+        <property name="reporteDinamicoDAO" ref="reporteDinamicoDAO" />
+    </bean>
+    <bean id="servicioReporteEstilos" class="com.mef.erp.servicios.ServicioReporteEstilos" scope="prototype">
+        <property name="reporteEstilosDAO" ref="reporteEstilosDAO" />
+    </bean>
+    <bean id="servicioReporteFuenteDatos" class="com.mef.erp.servicios.ServicioReporteFuenteDatos" scope="prototype">
+        <property name="reporteFuenteDatosDAO" ref="reporteFuenteDatosDAO" />
+    </bean>
+    <bean id="servicioReporteFijo" class="com.mef.erp.servicios.ServicioReporteFijo" scope="prototype">
+    </bean>
+    <bean id="servicioReporteOrdenGrupo" class="com.mef.erp.servicios.ServicioReporteOrdenGrupo" scope="prototype">
+        <property name="reporteOrdenGrupoDAO" ref="reporteOrdenGrupoDAO" />
+    </bean>
+    <bean id="servicioSalariosIntegrados" class="com.mef.erp.servicios.ServicioSalariosIntegrados" scope="prototype">
+        <property name="salariosIntegradosDAO" ref="salariosIntegradosDAO" />
+    </bean>
+    <bean id="servicioSalariosIntegradosDet" class="com.mef.erp.servicios.ServicioSalariosIntegradosDet" scope="prototype">
+        <property name="salariosIntegradosDetDAO" ref="salariosIntegradosDetDAO" />
+    </bean>
+    <bean id="servicioSistemas" class="com.mef.erp.servicios.ServicioSistemas" scope="prototype">
+        <property name="sistemasDAO" ref="sistemasDAO" />
+    </bean>
+    <bean id="servicioTablaBase" class="com.mef.erp.servicios.ServicioTablaBase" scope="prototype">
+        <property name="tablaBaseDAO" ref="tablaBaseDAO" />
+    </bean>
+    <bean id="servicioTablaDatos" class="com.mef.erp.servicios.ServicioTablaDatos" scope="prototype">
+        <property name="tablaDatosDAO" ref="tablaDatosDAO" />
+    </bean>
+    <bean id="servicioTablaPersonalizada" class="com.mef.erp.servicios.ServicioTablaPersonalizada" scope="prototype">
+        <property name="tablaPersonalizadaDAO" ref="tablaPersonalizadaDAO" />
+    </bean>
+    <bean id="servicioTipoCentroCostos" class="com.mef.erp.servicios.ServicioTipoCentroCostos" scope="prototype">
+        <property name="tipoCentroCostosDAO" ref="tipoCentroCostosDAO" />
+    </bean>
+    <bean id="servicioTipoElemento" class="com.mef.erp.servicios.ServicioTipoElemento" scope="prototype">
+        <property name="tipoElementoDAO" ref="tipoElementoDAO" />
+    </bean>
+    <bean id="servicioTipoHerramienta" class="com.mef.erp.servicios.ServicioTipoHerramienta" scope="prototype">
+        <property name="tipoHerramientaDAO" ref="tipoHerramientaDAO" />
+    </bean>
+    <bean id="servicioTipoTabla" class="com.mef.erp.servicios.ServicioTipoTabla" scope="prototype">
+        <property name="tipoTablaDAO" ref="tipoTablaDAO" />
+    </bean>
+    <bean id="servicioTurnos" class="com.mef.erp.servicios.ServicioTurnos" scope="prototype">
+        <property name="turnosDAO" ref="turnosDAO" />
+    </bean>
+    <bean id="servicioUsuario" class="com.mef.erp.servicios.ServicioUsuario" scope="prototype">
+        <property name="usuarioDAO" ref="usuarioDAO" />
+    </bean>
+    <bean id="servicioVentana" class="com.mef.erp.servicios.ServicioVentana" scope="prototype">
+        <property name="ventanaDAO" ref="ventanaDAO" />
+    </bean>
+    <bean id="servicioVacacionesDevengadas" class="com.mef.erp.servicios.ServicioVacacionesDevengadas" scope="prototype">
+        <property name="vacacionesDevengadasDAO" ref="vacacionesDevengadasDAO" />
+    </bean>
+    <bean id="servicioTipoNomina" class="com.mef.erp.servicios.ServicioTipoNomina" scope="prototype">
+        <property name="tipoNominaDAO" ref="tipoNominaDAO" />
+    </bean>
+    <bean id="servicioPeriodicidad" class="com.mef.erp.servicios.ServicioPeriodicidad" scope="prototype">
+        <property name="periodicidadDAO" ref="periodicidadDAO" />
+    </bean>
+    <bean id="servicioDepartamentos" class="com.mef.erp.servicios.ServicioDepartamentos" scope="prototype">
+        <property name="departamentosDAO" ref="departamentosDAO" />
+    </bean>
+    <bean id="servicioCreditoAhorro" class="com.mef.erp.servicios.ServicioCreditoAhorro" scope="prototype">
+        <property name="creditoAhorroDAO" ref="creditoAhorroDAO" />
+    </bean>    
+    <bean id="servicioTiposDeCambio" class="com.mef.erp.servicios.ServicioTiposDeCambio" scope="prototype">
+        <property name="tiposDeCambioDAO" ref="TiposDeCambioDAO" />
+    </bean>
+    <bean id="servicioTipoDeRedondeo" class="com.mef.erp.servicios.ServicioTipoDeRedondeo" scope="prototype">
+        <property name="tipoDeRedondeoDAO" ref="tipoDeRedondeoDAO" />
+    </bean>
+    <bean id="servicioTipoCorrida" class="com.mef.erp.servicios.ServicioTipoCorrida" scope="prototype">
+        <property name="tipoCorridaDAO" ref="tipoCorridaDAO" />
+    </bean>
+    <bean id="servicioBaseNomina" class="com.mef.erp.servicios.ServicioBaseNomina" scope="prototype">
+        <property name="baseNominaDAO" ref="baseNominaDAO" />
+    </bean>
+    <bean id="servicioBaseAfectadaConceptoNomina" class="com.mef.erp.servicios.ServicioBaseAfectadaConceptoNomina" scope="prototype">
+        <property name="baseAfectadaConceptoNominaDAO" ref="baseAfectadaConceptoNominaDAO" />
+    </bean>
+    <bean id="servicioBaseAfectadaGrupo" class="com.mef.erp.servicios.ServicioBaseAfectadaGrupo" scope="prototype">
+        <property name="baseAfectadaGrupoDAO" ref="baseAfectadaGrupoDAO" />
+    </bean>
+    <bean id="servicioCalculoNomina" class="com.mef.erp.servicios.ServicioCalculoNomina" scope="prototype">
+        <property name="calculaNominaDAO" ref="calculaNominaDAO" />
+    </bean>
+    <bean id="servicioCalculoPtu" class="com.mef.erp.servicios.ServicioCalculoPtu" scope="prototype">
+        <property name="calculoPtuDAO" ref="calculoPtuDAO" />
+    </bean>
+    <bean id="servicioCamposDimConceptos" class="com.mef.erp.servicios.ServicioCamposDimConceptos" scope="prototype">
+        <property name="camposDimConceptosDAO" ref="camposDimConceptosDAO" />
+    </bean>
+    <bean id="servicioCampoDIM" class="com.mef.erp.servicios.ServicioCampoDIM" scope="prototype">
+        <property name="campoDIMDAO" ref="campoDIMDAO" />
+    </bean>
+    <bean id="servicioConfiguraMovimiento" class="com.mef.erp.servicios.ServicioConfiguraMovimiento" scope="prototype">
+        <property name="configuraMovimientoDAO" ref="configuraMovimientoDAO" />
+    </bean>
+    <bean id="servicioConceptoDeNomina" class="com.mef.erp.servicios.ServicioConceptoDeNomina" scope="prototype">
+        <property name="conceptoDeNominaDAO" ref="conceptoDeNominaDAO" />
+    </bean>
+    <bean id="servicioConceptoDeNominaDefinicion" class="com.mef.erp.servicios.ServicioConceptoDeNominaDefinicion" scope="prototype">
+        <property name="conceptoDeNominaDefinicionDAO" ref="conceptoDeNominaDefinicionDAO" />
+    </bean>
+    <bean id="servicioTipoContrato" class="com.mef.erp.servicios.ServicioTipoContrato" scope="prototype">
+        <property name="tipoContratoDAO" ref="tipoContratoDAO" />
+    </bean>
+    <bean id="servicioSemaforoCalculoNomina" class="com.mef.erp.servicios.ServicioSemaforoCalculoNomina" scope="prototype">
+        <property name="semaforoCalculoNominaDAO" ref="semaforoCalculoNominaDAO" />
+    </bean>
+    <bean id="servicioSemaforoTimbradoPac" class="com.mef.erp.servicios.ServicioSemaforoTimbradoPac" scope="prototype">
+        <property name="semaforoTimbradoPacDAO" ref="semaforoTimbradoPacDAO" />
+    </bean>
+    <bean id="servicioTiposVacaciones" class="com.mef.erp.servicios.ServicioTiposVacaciones" scope="prototype">
+        <property name="tiposVacacionesDAO" ref="tiposVacacionesDAO" />
+    </bean>
+    <bean id="servicioVacacionesAplicacion" class="com.mef.erp.servicios.ServicioVacacionesAplicacion" scope="prototype">
+        <property name="vacacionesAplicacionDAO" ref="vacacionesAplicacionDAO" />
+    </bean>
+    <bean id="servicioVacacionesDisfrutadas" class="com.mef.erp.servicios.ServicioVacacionesDisfrutadas" scope="prototype">
+        <property name="vacacionesDisfrutadasDAO" ref="vacacionesDisfrutadasDAO" />
+    </bean>
+    
+    
+    <!-- DAOS -->
+    <bean id="asignaTipoReporteDAO" class="com.mef.erp.modelo.AsignaTipoReporteDAO" scope="prototype"/>
+    <bean id="asistenciasDAO" class="com.mef.erp.modelo.AsistenciasDAO" scope="prototype"/>
+    <bean id="bancosDAO" class="com.mef.erp.modelo.BancosDAO" scope="prototype"/>
+    <bean id="baseNominaDAO" class="com.mef.erp.modelo.BaseNominaDAO" scope="prototype"/>
+    <bean id="baseAfectadaConceptoNominaDAO" class="com.mef.erp.modelo.BaseAfectadaConceptoNominaDAO" scope="prototype"/>
+    <bean id="baseAfectadaGrupoDAO" class="com.mef.erp.modelo.BaseAfectadaGrupoDAO" scope="prototype"/>
+    <bean id="calculaNominaDAO" class="com.mef.erp.modelo.CalculaNominaDAO" scope="prototype"/>
+    <bean id="calculoPtuDAO" class="com.mef.erp.modelo.CalculoPtuDAO" scope="prototype"/>
+    <bean id="campoDIMDAO" class="com.mef.erp.modelo.CampoDIMDAO" scope="prototype"/>
+    <bean id="camposDimConceptosDAO" class="com.mef.erp.modelo.CamposDimConceptosDAO" scope="prototype"/>
+    <bean id="capacitacionesDAO" class="com.mef.erp.modelo.CapacitacionesDAO" scope="prototype"/>
+    <bean id="configuraMovimientoDAO" class="com.mef.erp.modelo.ConfiguraMovimientoDAO" scope="prototype"/>
+    <bean id="categoriasPuestosDAO" class="com.mef.erp.modelo.CategoriasPuestosDAO" scope="prototype"/>
+    <bean id="centroDeCostosDAO" class="com.mef.erp.modelo.CentroDeCostosDAO" scope="prototype"/>
+    <bean id="conceptoDeNominaDAO" class="com.mef.erp.modelo.ConceptoDeNominaDAO"  scope="prototype" />
+    <bean id="conceptoDeNominaDefinicionDAO" class="com.mef.erp.modelo.ConceptoDeNominaDefinicionDAO"  scope="prototype"/>
+    <bean id="configFoliacionDAO" class="com.mef.erp.modelo.ConfigFoliacionDAO" scope="prototype"/>
+    <bean id="configMascarasDAO" class="com.mef.erp.modelo.ConfigMascarasDAO" scope="prototype"/>
+    <bean id="conceptoPorTipoCorridaDAO" class="com.mef.erp.modelo.ConceptoPorTipoCorridaDAO" scope="prototype"/>
+    <bean id="conceptosEspecialesDAO" class="com.mef.erp.modelo.ConceptosEspecialesDAO" scope="prototype"/>
+    <bean id="configuracionAsistenciasDAO" class="com.mef.erp.modelo.ConfiguracionAsistenciasDAO" scope="prototype"/>
+    <bean id="configConceptosSatDAO" class="com.mef.erp.modelo.ConfigConceptosSatDAO" scope="prototype" />
+    <bean id="configuracionIMSSDAO" class="com.mef.erp.modelo.ConfiguracionIMSSDAO" scope="prototype"/>
+    <bean id="configuracionNivelCuentaDAO" class="com.mef.erp.modelo.ConfiguracionNivelCuentaDAO" scope="prototype"/>
+    <bean id="estrucCuentaDAO" class="com.mef.erp.modelo.EstrucCuentaDAO" scope="prototype"/>
+    <bean id="contactosDAO" class="com.mef.erp.modelo.ContactosDAO" scope="prototype"/>
+    <bean id="contenedorDAO" class="com.mef.erp.modelo.ContenedorDAO" scope="prototype"/>
+    <bean id="contenedorPersonalizadoDAO" class="com.mef.erp.modelo.ContenedorPersonalizadoDAO" scope="prototype" />
+    <bean id="creditoMovimientosDAO" class="com.mef.erp.modelo.CreditoMovimientosDAO" scope="prototype"/>
+    <bean id="ciudadesDAO" class="com.mef.erp.modelo.CiudadesDAO" scope="prototype"/>
+    <bean id="consultaGenericaDAO" class="com.mef.erp.modelo.ConsultaGenericaDAO" scope="prototype"/>
+    <bean id="consultaGenericaEspecialesDAO" class="com.mef.erp.modelo.ConsultaGenericaEspecialesDAO" scope="prototype"/>
+    <bean id="cpDAO" class="com.mef.erp.modelo.CpDAO" scope="prototype"/>    
+    <bean id="creditoPorEmpleadoDAO" class="com.mef.erp.modelo.CreditoPorEmpleadoDAO" scope="prototype"/>
+    <bean id="cruceDAO" class="com.mef.erp.modelo.CruceDAO" scope="prototype"/>
+    <bean id="cuentasContablesDAO" class="com.mef.erp.modelo.CuentasContablesDAO" scope="prototype"/>
+    <bean id="cursosDAO" class="com.mef.erp.modelo.CursosDAO" scope="prototype"/>
+    <bean id="configuraTimbradoDAO" class="com.mef.erp.modelo.ConfiguraTimbradoDAO" scope="prototype"/>
+    <bean id="despensaDAO" class="com.mef.erp.modelo.DespensaDAO" scope="prototype"/>
+    <bean id="documentacionDAO" class="com.mef.erp.modelo.DocumentacionDAO" scope="prototype"/>
+    <bean id="elementosAplicacionDAO" class="com.mef.erp.modelo.ElementosAplicacionDAO" scope="prototype"/>
+    <bean id="elementoExternoDAO" class="com.mef.erp.modelo.ElementoExternoDAO" scope="prototype"/>
+    <bean id="empleadosDAO" class="com.mef.erp.modelo.EmpleadosDAO" scope="prototype" />
+    <bean id="estadosDAO" class="com.mef.erp.modelo.EstadosDAO" scope="prototype"/>
+    <bean id="estudiosDAO" class="com.mef.erp.modelo.EstudiosDAO" scope="prototype"/>
+    <bean id="excepcionesDAO" class="com.mef.erp.modelo.ExcepcionesDAO" scope="prototype"/>
+    <bean id="experienciaLaboralExternaDAO" class="com.mef.erp.modelo.ExperienciaLaboralExternaDAO" scope="prototype" />
+    <bean id="experienciaLaboralInternaDAO" class="com.mef.erp.modelo.ExperienciaLaboralInternaDAO" scope="prototype" />
+    <bean id="externoPersonalizadoDAO" class="com.mef.erp.modelo.ExternoPersonalizadoDAO" scope="prototype" />
+    <bean id="familiaresDAO" class="com.mef.erp.modelo.FamiliaresDAO" scope="prototype" />
+    <bean id="finiqLiquidCncNomDAO" class="com.mef.erp.modelo.FiniqLiquidCncNomDAO" scope="prototype" />
+    <bean id="finiqLiquidPlazasDAO" class="com.mef.erp.modelo.FiniqLiquidPlazasDAO" scope="prototype" />
+    <bean id="finiquitosLiquidacionesDAO" class="com.mef.erp.modelo.FiniquitosLiquidacionesDAO" scope="prototype" />
+    <bean id="formacionEconomicaDAO" class="com.mef.erp.modelo.FormacionEconomicaDAO" scope="prototype" />
+    <bean id="formasDePagoDAO" class="com.mef.erp.modelo.FormasDePagoDAO" scope="prototype" />
+    <bean id="gruposDAO" class="com.mef.erp.modelo.GruposDAO" scope="prototype" />
+    <bean id="generoDAO" class="com.mef.erp.modelo.GeneroDAO" scope="prototype"/>
+    <bean id="formatoCnxContaDAO" class="com.mef.erp.modelo.FormatoCnxContaDAO" scope="prototype"/>
+    <bean id="herramientaDAO" class="com.mef.erp.modelo.HerramientaDAO" scope="prototype" />
+    <bean id="herramientaPersonalizadaDAO" class="com.mef.erp.modelo.HerramientaPersonalizadaDAO" scope="prototype" />
+    <bean id="horarioDAO" class="com.mef.erp.modelo.HorarioDAO" scope="prototype" />
+    <bean id="importaCamposDAO" class="com.mef.erp.modelo.ImportaCamposDAO" scope="prototype" />
+    <bean id="incidenciasDAO" class="com.mef.erp.modelo.IncidenciasDAO" scope="prototype" />
+    <bean id="ingresosReingresosBajasDAO" class="com.mef.erp.modelo.IngresosReingresosBajasDAO" scope="prototype"/>
+    <bean id="firmasDAO" class="com.mef.erp.modelo.FirmasDAO" scope="prototype" />
+    <bean id="jornadaDAO" class="com.mef.erp.modelo.JornadaDAO" scope="prototype" />
+    <bean id="nivelesClasificacionDAO" class="com.mef.erp.modelo.NivelesClasificacionDAO" scope="prototype" />
+    <bean id="moduloDAO" class="com.mef.erp.modelo.ModuloDAO" scope="prototype" />
+    <bean id="monedasDAO" class="com.mef.erp.modelo.MonedasDAO" scope="prototype" />
+    <bean id="movNominaBaseAfectaDAO" class="com.mef.erp.modelo.MovNominaBaseAfectaDAO" scope="prototype" />
+    <bean id="movimientosNominaDAO" class="com.mef.erp.modelo.MovimientosNominaDAO" scope="prototype" />
+    <bean id="municipiosDAO" class="com.mef.erp.modelo.MunicipiosDAO" scope="prototype" />
+    <bean id="cfdiEmpleadoDAO" class="com.mef.erp.modelo.CFDIEmpleadoDAO" scope="prototype" />
+    <bean id="cfdiReciboDAO" class="com.mef.erp.modelo.CFDIReciboDAO" scope="prototype" />
+    <bean id="paisesDAO" class="com.mef.erp.modelo.PaisesDAO" scope="prototype"/>
+    <bean id="parametroConceptosDeNominaDAO" class="com.mef.erp.modelo.ParametroConceptosDeNominaDAO" scope="prototype" />
+    <bean id="parametrosDAO" class="com.mef.erp.modelo.ParametrosDAO" scope="prototype" />
+    <bean id="parametrosConsultaDAO" class="com.mef.erp.modelo.ParametrosConsultaDAO" scope="prototype" />
+    <bean id="parentescoDAO" class="com.mef.erp.modelo.ParentescoDAO" scope="prototype" />
+    <bean id="percepcionesFijasDAO" class="com.mef.erp.modelo.PercepcionesFijasDAO" scope="prototype" />
+    <bean id="periodosNominaDAO" class="com.mef.erp.modelo.PeriodosNominaDAO" scope="prototype" />
+    <bean id="permisosDAO" class="com.mef.erp.modelo.PermisosDAO" scope="prototype" />
+    <bean id="plazasDAO" class="com.mef.erp.modelo.PlazasDAO" scope="prototype" />
+    <bean id="plazasPorEmpleadoDAO" class="com.mef.erp.modelo.PlazasPorEmpleadoDAO" scope="prototype" />
+    <bean id="plazasPorEmpleadosMovDAO" class="com.mef.erp.modelo.PlazasPorEmpleadosMovDAO" scope="prototype" />
+    <bean id="primasDAO" class="com.mef.erp.modelo.PrimasDAO" scope="prototype"/>
+    <bean id="puestosDAO" class="com.mef.erp.modelo.PuestosDAO" scope="prototype"/>
+    <bean id="razonSocialDAO" class="com.mef.erp.modelo.RazonSocialDAO" scope="prototype"/>
+    <bean id="razonSocialConfiguracionDAO" class="com.mef.erp.modelo.RazonSocialConfiguracionDAO" scope="prototype"/>
+    <bean id="razonesSocialesDAO" class="com.mef.erp.modelo.RazonesSocialesDAO" scope="prototype"/>
+    <bean id="registroPatronalDAO" class="com.mef.erp.modelo.RegistroPatronalDAO" scope="prototype"/>
+    <bean id="reporteDatosIncluirDAO" class="com.mef.erp.modelo.ReporteDatosIncluirDAO" scope="prototype"/>
+    <bean id="reporteDinamicoDAO" class="com.mef.erp.modelo.ReporteDinamicoDAO" scope="prototype"/>
+    <bean id="reporteEstilosDAO" class="com.mef.erp.modelo.ReporteEstilosDAO" scope="prototype"/>
+    <bean id="reporteFuenteDatosDAO" class="com.mef.erp.modelo.ReporteFuenteDatosDAO" scope="prototype"/>
+    <bean id="reporteOrdenGrupoDAO" class="com.mef.erp.modelo.ReporteOrdenGrupoDAO" scope="prototype"/>
+    <bean id="perfilDAO" class="com.mef.erp.modelo.PerfilDAO" scope="prototype"/>
+    <bean id="salariosIntegradosDAO" class="com.mef.erp.modelo.SalariosIntegradosDAO" scope="prototype"/>
+    <bean id="salariosIntegradosDetDAO" class="com.mef.erp.modelo.SalariosIntegradosDetDAO" scope="prototype"/>
+    <bean id="sistemasDAO" class="com.mef.erp.modelo.SistemasDAO" scope="prototype"/>
+    <bean id="registroIncapacidadDAO" class="com.mef.erp.modelo.RegistroIncapacidadDAO" scope="prototype"/>
+    <bean id="restriccionesDAO" class="com.mef.erp.modelo.RestriccionesDAO" scope="prototype"/>
+    <bean id="tablaBaseDAO" class="com.mef.erp.modelo.TablaBaseDAO" scope="prototype"/>
+    <bean id="tablaDatosDAO" class="com.mef.erp.modelo.TablaDatosDAO" scope="prototype"/>
+    <bean id="tablaPersonalizadaDAO" class="com.mef.erp.modelo.TablaPersonalizadaDAO" scope="prototype"/>
+    <bean id="tipoCentroCostosDAO" class="com.mef.erp.modelo.TipoCentroCostosDAO" scope="prototype"/>
+    <bean id="tipoElementoDAO" class="com.mef.erp.modelo.TipoElementoDAO" scope="prototype"/>
+    <bean id="tipoHerramientaDAO" class="com.mef.erp.modelo.TipoHerramientaDAO" scope="prototype"/>
+    <bean id="tipoTablaDAO" class="com.mef.erp.modelo.TipoTablaDAO" scope="prototype"/>
+    <bean id="turnosDAO" class="com.mef.erp.modelo.TurnosDAO" scope="prototype"/>
+    <bean id="usuarioDAO" class="com.mef.erp.modelo.UsuarioDAO" scope="prototype"/>
+    <bean id="ventanaDAO" class="com.mef.erp.modelo.VentanaDAO" scope="prototype"/>
+    <bean id="tipoNominaDAO" class="com.mef.erp.modelo.TipoNominaDAO" scope="prototype"/>
+    <bean id="periodicidadDAO" class="com.mef.erp.modelo.PeriodicidadDAO" scope="prototype"/>
+    <bean id="departamentosDAO" class="com.mef.erp.modelo.DepartamentosDAO" scope="prototype"/>
+    <bean id="creditoAhorroDAO" class="com.mef.erp.modelo.CreditoAhorroDAO" scope="prototype"/>
+    <bean id="TiposDeCambioDAO" class="com.mef.erp.modelo.TiposDeCambioDAO" scope="prototype"/>
+    <bean id="tipoDeRedondeoDAO" class="com.mef.erp.modelo.TipoDeRedondeoDAO" scope="prototype"/>
+    <bean id="tipoCorridaDAO" class="com.mef.erp.modelo.TipoCorridaDAO" scope="prototype"/>
+    <bean id="tipoContratoDAO" class="com.mef.erp.modelo.TipoContratoDAO" scope="prototype"/>
+    <bean id="tiposVacacionesDAO" class="com.mef.erp.modelo.TiposVacacionesDAO" scope="prototype"/>
+    <bean id="vacacionesDevengadasDAO" class="com.mef.erp.modelo.VacacionesDevengadasDAO" scope="prototype"/>
+    <bean id="semaforoCalculoNominaDAO" class="com.mef.erp.modelo.SemaforoCalculoNominaDAO" scope="prototype"/>
+    <bean id="semaforoTimbradoPacDAO" class="com.mef.erp.modelo.SemaforoTimbradoPacDAO" scope="prototype"/>
+    <bean id="vacacionesAplicacionDAO" class="com.mef.erp.modelo.VacacionesAplicacionDAO" scope="prototype"/>
+    <bean id="vacacionesDisfrutadasDAO" class="com.mef.erp.modelo.VacacionesDisfrutadasDAO" scope="prototype"/>
+    <bean id="diasAguinaldoDAO" class="com.mef.erp.modelo.DiasAguinaldoDAO" scope="prototype"/>
+    <bean id="configuracionAguinaldoDAO" class="com.mef.erp.modelo.ConfiguracionAguinaldoDAO" scope="prototype"/>
+    <bean id="aguinaldoFechasDAO" class="com.mef.erp.modelo.AguinaldoFechasDAO" scope="prototype"/>
+    <bean id="aguinaldoPagosDAO" class="com.mef.erp.modelo.AguinaldoPagosDAO" scope="prototype"/>
+</beans>

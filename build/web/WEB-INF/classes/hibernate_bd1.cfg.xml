@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--192.168.10.85-->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=MEFMaster</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">adminadmin</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.connection.pool_size">0</property>
+        <mapping class="com.mef.erp.modelo.entidad.Contenedor"/>
+        <mapping class="com.mef.erp.modelo.entidad.ContenedorPersonalizado"/>
+        <mapping class="com.mef.erp.modelo.entidad.Cruce"/>
+        <mapping class="com.mef.erp.modelo.entidad.ElementosAplicacion"/>
+        <mapping class="com.mef.erp.modelo.entidad.ElementoExterno"/>
+        <mapping class="com.mef.erp.modelo.entidad.ExternoPersonalizado"/>
+        <mapping class="com.mef.erp.modelo.entidad.Herramienta"/>
+        <mapping class="com.mef.erp.modelo.entidad.HerramientaPersonalizada"/>
+        <mapping class="com.mef.erp.modelo.entidad.Modulo"/>
+        <mapping class="com.mef.erp.modelo.entidad.Parametros"/>
+        <mapping class="com.mef.erp.modelo.entidad.Permisos"/>
+        <mapping class="com.mef.erp.modelo.entidad.Perfiles"/>
+        <mapping class="com.mef.erp.modelo.entidad.Restriccion"/>
+        <mapping class="com.mef.erp.modelo.entidad.Sistemas"/>
+        <mapping class="com.mef.erp.modelo.entidad.TablaDatos"/>
+        <mapping class="com.mef.erp.modelo.entidad.TablaBase"/>
+        <mapping class="com.mef.erp.modelo.entidad.TablaPersonalizada"/>
+        <mapping class="com.mef.erp.modelo.entidad.TipoElemento"/>
+        <mapping class="com.mef.erp.modelo.entidad.TipoHerramienta"/>
+        <mapping class="com.mef.erp.modelo.entidad.TipoTabla"/>
+        <mapping class="com.mef.erp.modelo.entidad.Usuario"/>
+        <mapping class="com.mef.erp.modelo.entidad.Ventana"/>
+        <mapping class="com.mef.erp.modelo.entidad.RazonSocial"/>
+        <mapping class="com.mef.erp.modelo.entidad.DatosConsulta"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteDatos"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteDatosIncluir"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteDinamico"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteEstilos"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteFuenteDatos"/>
+        <mapping class="com.mef.erp.modelo.entidad.ReporteOrdenGrupo"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.EstrucCuenta"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.ConfiguracionNivelCuenta"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.CuentasContables"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.DatosDisponiblesCxnConta"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.FormatoCnXConta"/>
+        <mapping class="com.mef.erp.modelo.entidad.contabilidad.FormatosCnxContaDet"/>
+       
+    
+    
+    </session-factory>
+</hibernate-configuration>
